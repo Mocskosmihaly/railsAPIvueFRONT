@@ -1,7 +1,6 @@
 <template>
   <div class="max-w-sm m-auto my-8">
     <div class="border p-10 border-grey-light shadow rounded">
-      <h3 class="text-2xl mb-6 text-grey-darkest">Sign In</h3>
       <form @submit.prevent="signin">
         <div class="text-red" v-if="error">{{ error }}</div>
 
@@ -27,13 +26,13 @@
         </div>
         <button
           type="submit"
-          class="uppercase text-xl font-mono font-semibold content-between no-underline text-indigo-dark hover:text-indigo-darker"
+          class="uppercase text-l font-mono font-semibold content-center no-underline text-indigo-dark hover:text-indigo-darker"
         >Sign In</button>
 
         <div class="my-4">
           <router-link
             to="/signup"
-            class="uppercase text-m font-mono pl-4 font-semibold no-underline text-indigo-dark hover:text-indigo-darker"
+            class="uppercase text-m font-mono pl-4 font-semibold no-underline text-indigo-dark hover:text-indigo-darker content-center"
           >Sign up</router-link>
         </div>
       </form>
@@ -90,3 +89,11 @@ export default {
   }
 };
 </script>
+<style scoped>
+.content-center {
+  text-align: center;
+  display: flex;
+
+  margin: 0 auto;
+}
+</style>

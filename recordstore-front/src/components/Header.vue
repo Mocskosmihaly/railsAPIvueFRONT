@@ -16,8 +16,12 @@
 
         <a
           href="/"
-          class="uppercase text-m font-mono pl-4 font-semibold no-underline text-indigo-dark hover:text-indigo-darker"
-        >BRODE TABLE</a>
+          class="uppercase text-xl font-mono pl-4 font-semibold no-underline text-indigo-dark hover:text-indigo-darker"
+        >
+          <div class="imged">
+            <img src="https://img.icons8.com/plasticine/40/000000/cargo-ship.png" /> BRODOVA TABULA
+          </div>
+        </a>
       </div>
       <div>
         <router-link
@@ -85,3 +89,11 @@ export default {
   }
 };
 </script>
+
+
+<style scoped>
+.imged {
+  /* padding-top: 50px; */
+  /* margin-top: 50px; */
+}
+</style>

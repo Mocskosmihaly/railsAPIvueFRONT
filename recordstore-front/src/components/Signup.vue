@@ -39,11 +39,14 @@
         </div>
         <button
           type="submit"
-          class="font-sans font-bold px-4 rounded cursor-pointer no-underline bg-green hover:bg-green-dark block w-full py-4 text-white items-center justify-center"
+          class="uppercase text-m font-mono pl-4 font-semibold no-underline text-indigo-dark hover:text-indigo-darker content-center"
         >Sign Up</button>
 
         <div class="my-4">
-          <router-link to="/" class="link-grey">Sign In</router-link>
+          <router-link
+            to="/"
+            class="uppercase text-m font-mono pl-4 font-semibold no-underline text-indigo-dark hover:text-indigo-darker content-center"
+          >Sign In</router-link>
         </div>
       </form>
     </div>
@@ -105,3 +108,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.content-center {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+</style>

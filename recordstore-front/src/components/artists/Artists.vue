@@ -40,15 +40,7 @@
         <v-flex md5 class="container" v-show="i == inputs.length - 1">
           <h4>SEKUND</h4>
 
-          <v-text-field
-            class="num-container"
-            v-model="sec"
-            required
-            outlined
-            :maxlength="4"
-            placeholder
-            type="number"
-          ></v-text-field>
+          <v-text-field class="shrink" required outlined :maxlength="4" placeholder type="number"></v-text-field>
         </v-flex>
       </v-container>
     </v-form>
@@ -81,15 +73,17 @@
         <fa-icon icon="retweet" />
       </v-btn>
     </v-flex>
-    <div class="template"></div>
+    <div class="template">
+      <HomePreview v-show="showTable" />
+    </div>
   </div>
 </template>
 
 <script>
 import { mapActions } from "vuex";
-
+import HomePreview from "./HomePreview";
 export default {
-  name: "Config",
+  name: "Artists",
   data() {
     return {
       inputs: [
@@ -104,6 +98,7 @@ export default {
       showRef: false
     };
   },
+  components: { HomePreview },
   mounted() {
     if (localStorage.inputs) {
       this.inputs = JSON.parse(localStorage.inputs);
@@ -241,12 +236,13 @@ export default {
 
 .container {
   position: relative;
+  /* width: 40px; */
 }
 .text-container {
   width: 800px;
 }
 .topped {
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 .title {
@@ -254,9 +250,7 @@ export default {
   z-index: -1;
   font-weight: bold;
 }
-.num-container {
-  width: 80px;
-}
+
 .right {
   display: flex;
   /* flex-direction: column; */
@@ -340,5 +334,9 @@ h4 {
 }
 .green {
   color: rgb(36, 172, 36);
+}
+
+.num-c {
+  width: 200px;
 }
 </style>
