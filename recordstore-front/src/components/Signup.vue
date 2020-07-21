@@ -88,6 +88,7 @@ export default {
       localStorage.signedIn = true;
       this.error = "";
       this.$router.replace("/records");
+      this.$router.go();
     },
     signupFailed(error) {
       this.error =

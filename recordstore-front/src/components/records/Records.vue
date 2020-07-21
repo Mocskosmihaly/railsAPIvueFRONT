@@ -1,42 +1,34 @@
 <template>
-  <body>
-    <div class="container">
-      <table>
-        <thead>
-          <tr>
-            <th scope="col" class="colc">DÁTUM</th>
-            <th scope="col header" class="colc">ČAS</th>
-            <th scope="col header" class="colc szwsz">TEPLOTA VZDUCHU</th>
-            <th scope="col header" class="colc">RÝCHLOST´ VETRA</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="priority-200">
-            <td id="writeDay" class="default">{{ createdDate }}</td>
-            <td data-label="ČAS" id="hour" class="default">
-              {{ createdHours }}
-            </td>
-            <td data-label="TEPLOTA VZDUCHU" id="degree" class="default szwsz">
-              25°C
-            </td>
-            <td data-label="RÝCHLOST´ VETRA" id="speed" class="default">
-              13km/hod
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="container2">
-        <h1
-          class="content"
-          v-for="(m, index) of message"
-          :key="index"
-          :class="{ 'is-active': index === activeSpan }"
-        >
-          {{ m }}
-        </h1>
-      </div>
+<body>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" class="colc">DÁTUM</th>
+          <th scope="col header" class="colc">ČAS</th>
+          <th scope="col header" class="colc szwsz">TEPLOTA VZDUCHU</th>
+          <th scope="col header" class="colc">RÝCHLOST´ VETRA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="priority-200">
+          <td id="writeDay" class="default">{{ createdDate }}</td>
+          <td data-label="ČAS" id="hour" class="default">{{ createdHours }}</td>
+          <td data-label="TEPLOTA VZDUCHU" id="degree" class="default szwsz">25°C</td>
+          <td data-label="RÝCHLOST´ VETRA" id="speed" class="default">13km/hod</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="container2">
+      <h1
+        class="content"
+        v-for="(m, index) of message"
+        :key="index"
+        :class="{ 'is-active': index === activeSpan }"
+      >{{ m }}</h1>
     </div>
-  </body>
+  </div>
+</body>
 </template>
 
 <script>

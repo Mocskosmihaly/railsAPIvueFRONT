@@ -27,19 +27,14 @@
         </div>
         <button
           type="submit"
-          class="uppercase text-xl
-   font-mono  font-semibold content-between no-underline text-indigo-dark hover:text-indigo-darker"
-        >
-          Sign In
-        </button>
+          class="uppercase text-xl font-mono font-semibold content-between no-underline text-indigo-dark hover:text-indigo-darker"
+        >Sign In</button>
 
         <div class="my-4">
           <router-link
             to="/signup"
-            class="uppercase text-m
-   font-mono pl-4 font-semibold no-underline text-indigo-dark hover:text-indigo-darker"
-            >Sign up</router-link
-          >
+            class="uppercase text-m font-mono pl-4 font-semibold no-underline text-indigo-dark hover:text-indigo-darker"
+          >Sign up</router-link>
         </div>
       </form>
     </div>
@@ -78,6 +73,7 @@ export default {
       localStorage.signedIn = true;
       this.error = "";
       this.$router.replace("/records");
+      this.$router.go();
     },
     signinFailed(error) {
       this.error =

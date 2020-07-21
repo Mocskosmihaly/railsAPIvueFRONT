@@ -2,13 +2,7 @@
   <div id="app">
     <h1 class="title">CONFIG PANEL</h1>
 
-    <v-form
-      ref="form"
-      class="container"
-      v-for="(input, i) in inputs"
-      :key="i"
-      lazy-validation
-    >
+    <v-form ref="form" class="container" v-for="(input, i) in inputs" :key="i" lazy-validation>
       <v-container class="container">
         <v-layout>
           <v-flex lg12 class="container">
@@ -37,12 +31,7 @@
           </v-flex>
 
           <v-flex lg6 class="container">
-            <v-btn
-              class="red topped"
-              outlined
-              height="55px"
-              @click="deleteLines(i)"
-            >
+            <v-btn class="red topped" outlined height="55px" @click="deleteLines(i)">
               <p class="bold red">VYMAZAŤ</p>
               <fa-icon icon="trash" />
             </v-btn>
@@ -64,13 +53,7 @@
       </v-container>
     </v-form>
     <v-flex>
-      <v-btn
-        class="blue middle"
-        v-show="plusVisible"
-        height="50px"
-        @click="addLinesB(i)"
-        outlined
-      >
+      <v-btn class="blue middle" v-show="plusVisible" height="50px" @click="addLinesB(i)" outlined>
         <p class="bold"></p>
         <fa-icon icon="plus-circle" class="fa-x" />
       </v-btn>
@@ -92,13 +75,7 @@
         <p class="bold">ZAVRIEŤ</p>
         <fa-icon icon="times" class="fa-2x" />
       </v-btn>
-      <v-btn
-        v-show="showRef"
-        height="50px"
-        class="middlebtn colorised"
-        @click="refresh"
-        outlined
-      >
+      <v-btn v-show="showRef" height="50px" class="middlebtn colorised" @click="refresh" outlined>
         <p class="bold">Obnoviť</p>
 
         <fa-icon icon="retweet" />
@@ -112,7 +89,7 @@
 import { mapActions } from "vuex";
 
 export default {
-  name: "Artists",
+  name: "Config",
   data() {
     return {
       inputs: [
