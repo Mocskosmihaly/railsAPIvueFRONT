@@ -9,6 +9,6 @@ class ApplicationController < ActionController::API
     end
 
     def not_authorized
-      render json: { error: 'Not authorizsssssed' }, status: :unauthorized
+      render json: { error: 'Cannot find email/password combination' }, status: :unauthorized
     end
 end
