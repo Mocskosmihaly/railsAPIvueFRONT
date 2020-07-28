@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <!-- INNNENNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN -->
+
+    <!-- INNNENNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN -->
     <h1 class="title">CONFIG PANEL</h1>
 
     <v-form ref="form" class="container" v-for="(input, i) in inputs" :key="i" lazy-validation>
